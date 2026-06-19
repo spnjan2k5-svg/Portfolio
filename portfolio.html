@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="header" id="home">
+        <div class="container">
+
+            <nav>
+                <img src="banner_anisha-italic.jpg" class="logo">
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+<div class="header-text">
+    <p>Front-End Designer</p>
+    <h1>Hi, I'm <span style="color: brown;">Anisha</span></h1>
+</div>
+        </div>
+    </div>
+
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="IMG-20260317-WA0016.jpg" alt="user">
+                </div>
+                <div class="about-col-2">
+               <h1 class="sub-title">About Me</h1>
+               <p class="des">I am a Computer Science student with a passion for web development and technology. I enjoy creating responsive and user-friendly websites using HTML, CSS, and JavaScript. I am constantly learning new skills and improving my knowledge to build modern and creative web applications. My goal is to grow as a developer and contribute to meaningful projects.</p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')"><b>Skills</b></p>
+                <p class="tab-links "onclick="opentab('Experience')"><b>Experience</b></p>
+                <p class="tab-links" onclick="opentab('Education')"><b>Education</b></p>
+            </div>   
+            <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                    <li><span>Front-End<br></span>Designing web interfaces</li>
+                    <li><span>Web Development<br></span>Web app interfaces</li>
+                    <li><span>Learning new tech<br></span>Designing web interfaces</li>
+                </ul>
+            </div>
+             <div class="tab-contents" id="Experience">
+                <ul>
+                    <li><span>2024-2025<br></span>Oasis Infobyte</li>
+                    <li><span>2025-2026<br></span>AP Technolgies</li>
+                </ul>
+            </div>
+             <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>2007-2021<br></span>Timpany Senior Secondary School(cbse)</li>
+                    <li><span>2021-2023<br></span>Inter(MPC)</li>
+                    <li><span>2023-2027<br></span>Andhra University(Btech)</li>
+                </ul>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+<!-- ----------------services------------- -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <br>
+                <p>
+                   Crafting attractive and user-friendly website designs with a focus on clean layouts, modern aesthetics, and responsive experiences.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+             <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Front-End Development</h2>
+                <br>
+                <p>
+                    I build responsive websites using HTML, CSS, and JavaScript. I enjoy turning ideas into interactive web pages that work smoothly across different devices and screen sizes.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>Responsive Websites</h2>
+                <br>
+                <p>
+                   Creating websites that adapt perfectly across desktops, tablets, and mobile devices while maintaining performance and usability.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+   document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+
+    <section id="contact">
+    <div class="container">
+
+        <div class="contact-row">
+
+            <div class="contact-left">
+
+                <h1 class="sub-title">Contact Me</h1>
+
+                <p>📧 anisha@example.com</p>
+
+                <p>📞 +91 9876543210</p>
+
+                <div class="social-icons">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Instagram</a>
+                </div>
+
+            </div>
+
+            <div class="contact-right">
+
+                <form>
+
+                    <input type="text" placeholder="Your Name">
+
+                    <input type="email" placeholder="Your Email">
+
+                    <textarea rows="6" placeholder="Your Message"></textarea>
+
+                    <button type="submit">Submit</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+</body>
+</html>
